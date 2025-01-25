@@ -1,0 +1,16 @@
+.wrapper {
+    border: 2px solid;
+    width: fit-content;
+    height: fit-content;
+}
+
+.imgSec {
+    
+
+    img {
+        width: 60%;
+        height: 90%;
+        
+        border: 2px solid;
+    }
+}
