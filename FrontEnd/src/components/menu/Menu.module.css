@@ -39,7 +39,8 @@
     transform: scale(1.02);
 
 }
-.active{
+
+.active {
     background-color: #0796EF;
 }
 
@@ -49,7 +50,8 @@
         width: 95.25px;
         height: 40.98px;
     }
-    .container{
-    padding: 2.3% 0%;
+
+    .container {
+        padding: 2.3% 0%;
     }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import styles from './HomePage.module.css'
 import NavBar from '../components/navBar/NavBar'
 import Banner from '../components/banner/banner'
@@ -7,36 +7,36 @@ import MenuDetails from '../components/menuDetails/MenuDetails'
 import About from '../components/about/about'
 import axios from 'axios'
 
-interface menulistProps{
-  menuname:string;
-  menudiscription:string;
-  _id:string;
+interface menulistProps {
+  menuname: string;
+  menudiscription: string;
+  _id: string;
 }
 
-interface fooditemsProps{
-  foodName:string;
-  foodDiscription:string;
-  price:number;
-  menuId:string;
-  _id:string;
+interface fooditemsProps {
+  foodName: string;
+  foodDiscription: string;
+  price: number;
+  menuId: string;
+  _id: string;
 }
 
 const HomePage: React.FC = () => {
 
-const [menulist, setMenulist] = useState<menulistProps[]>([])
-const [fooditems, setFooditems] = useState<fooditemsProps[]>([])
-const [selectedMenu, setSelectedMenu] = useState<menulistProps | null>(null)
+  const [menulist, setMenulist] = useState<menulistProps[]>([])
+  const [fooditems, setFooditems] = useState<fooditemsProps[]>([])
+  const [selectedMenu, setSelectedMenu] = useState<menulistProps | null>(null)
 
 
-// useeffect for fetch all   menulist
+  // useeffect for fetch all   menulist
 
-  useEffect( () => {
+  useLayoutEffect(() => {
 
-    const fetchdata = async ()=>{
+    const fetchdata = async () => {
       try {
         await axios.get("http://localhost:5000/api/menu").then((response) => {
           console.log(response.data);
-          if(response && response.status==200 && response.data){
+          if (response && response.status == 200 && response.data) {
             setMenulist(response.data)
             setSelectedMenu(response.data[1])
           }
@@ -50,13 +50,13 @@ const [selectedMenu, setSelectedMenu] = useState<menulistProps | null>(null)
 
   //  useeffect for fetch all fooditems
 
-  useEffect( () => {
-    
-    const fetchfooditems= async ()=>{
+  useLayoutEffect(() => {
+
+    const fetchfooditems = async () => {
       try {
         await axios.get("http://localhost:5000/api/food").then((response) => {
           console.log(response.data);
-          if(response && response.status==200 && response.data){
+          if (response && response.status == 200 && response.data) {
             setFooditems(response.data)
           }
         })
@@ -70,10 +70,10 @@ const [selectedMenu, setSelectedMenu] = useState<menulistProps | null>(null)
 
   return (
     <div className={styles.container}>
-      <NavBar />  
+      <NavBar />
       <Banner />
-      <Menu menulist={menulist} selectedMenu={selectedMenu} setselectedMenu={setSelectedMenu}/>
-      <MenuDetails  selectedMenu={selectedMenu} foodItems={fooditems}/>
+      <Menu menulist={menulist} selectedMenu={selectedMenu} setselectedMenu={setSelectedMenu} />
+      <MenuDetails selectedMenu={selectedMenu} foodItems={fooditems} />
       <About />
     </div>
   )

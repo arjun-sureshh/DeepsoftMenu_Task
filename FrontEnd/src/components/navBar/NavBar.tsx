@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './NavBar.module.css';
+import logo from '../../assets/logo-removebg-preview.png'
+import { IoMenu } from 'react-icons/io5';
 
 const NavBar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,9 +12,20 @@ const NavBar: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.menuToggle} onClick={toggleMenu}>
-        ☰
+
+      <div className={styles.logoSection}>
+        <div className={styles.logo}>
+          <img src={logo} alt="logo.png" />
+        </div>
+        <div className={styles.webNameSection}>
+          <div className={styles.deepnet}> <span className={styles.deep}>Deep</span> Net</div>
+          <div className={styles.soft}>Soft</div>
+        </div>
       </div>
+      <div className={styles.menuToggle} onClick={toggleMenu}>
+        <IoMenu />
+      </div>
+
       <div
         className={`${styles.navItems} ${menuOpen ? styles.active : ''}`}
       >

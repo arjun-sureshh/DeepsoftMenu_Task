@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from './item.module.css'
 
-interface ItemProps{
-    name:string;
-    price:number;
-    description:string;
+interface ItemProps {
+  name: string;
+  price: number;
+  description: string;
 }
 
-const Item:React.FC<ItemProps> = ({name,price,description}) => {
+const Item: React.FC<ItemProps> = ({ name, price, description }) => {
   return (
     <div className={styles.menu_item}>
       <div className={styles.menu_header}>

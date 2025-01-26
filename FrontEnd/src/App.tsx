@@ -1,9 +1,9 @@
 import React from 'react'
 import HomePage from './page/HomePage'
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   return (
-      <HomePage/>
+    <HomePage />
   )
 }
 

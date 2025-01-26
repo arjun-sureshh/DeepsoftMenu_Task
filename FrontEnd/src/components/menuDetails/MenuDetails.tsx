@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './MenuDetails.module.css'
-import SideImg from '../sideimg/SideImg'
-import leftsideImage from '../../assets/leftsideImg-removebg-preview.png'
-import rightsideImage from '../../assets/rightSideImg-removebg-preview.png'
 import Item from '../item/item'
 import drink1 from '../../assets/drinks1.png'
+import drink2 from '../../assets/drinks2.png'
 
 
 interface fooditemsProps {
@@ -40,28 +38,29 @@ const MenuDetails: React.FC<MenuDetailsProps> = ({ selectedMenu, foodItems }) =>
 
     return (
         <div className={styles.container}>
-            <div  className={styles.sideimg}>
-            <div className={styles.leftimg}></div>
+            <div className={styles.sideimg}>
+                <div className={styles.leftimg}></div>
             </div>
             <div className={styles.displayContainer}>
                 <div className={styles.menuItemContainer}>
                     <div className={styles.titleSec}>
                         <div className={styles.img}><img src={drink1} alt="" /></div>
                         <div className={styles.title}><span className={styles.border}>
-                            </span> {selectedMenu?.menudiscription} <span className={styles.border}></span></div>
+                        </span> <span className={styles.titleName}> {selectedMenu?.menudiscription} </span> <span className={styles.border}></span></div>
                     </div>
                     <div className={styles.menu_grid}>
-                        {selectedItem&& selectedItem.map((item, index) => (
+                        {selectedItem && selectedItem.map((item, index) => (
                             <Item name={item.foodName}
                                 price={item.price}
                                 description={item.foodDiscription} />
                         ))
-                    }
+                        }
                     </div>
+                    <div className={styles.menuimage}><img src={drink2} alt="" /></div>
                 </div>
             </div>
-            <div  className={styles.sideimg}>
-            <div className={styles.rightimg}></div>
+            <div className={styles.sideimg}>
+                <div className={styles.rightimg}></div>
             </div>
         </div>
     )

@@ -1,27 +1,24 @@
-
 .menu_item {
-    /* width: fit-content; */
     min-width: 35%;
+    width: 40%;
     margin-bottom: 20px;
 }
 
 .menu_header {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .name {
     color: rgba(255, 255, 255, 1);
     font-family: 'Oswald', sans-serif;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 38.53px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-
-
 }
 
 .dots {
@@ -36,7 +33,7 @@
 
 .description {
     font-family: Kelly Slab;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 21.82px;
     text-align: left;
@@ -52,20 +49,53 @@
         width: 100%;
         margin-bottom: 20px;
     }
+
     .menu_header {
         width: 100%;
         font-size: 16px;
     }
-    .name{
+
+    .name {
         font-size: 16px;
     }
-    .dots{
+
+    .dots {
         font-size: 16px;
     }
-    .price{
+
+    .price {
         font-size: 16px;
     }
-    .description{
+
+    .description {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 571px) and (max-width: 769px) {
+    .menu_item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu_header {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .dots {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .description {
         font-size: 14px;
     }
 }
