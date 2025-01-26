@@ -52,7 +52,7 @@ const MenuDetails: React.FC<MenuDetailsProps> = ({ selectedMenu, foodItems }) =>
                         {selectedItem && selectedItem.map((item, index) => (
                             <Item name={item.foodName}
                                 price={item.price}
-                                description={item.foodDiscription} />
+                                description={item.foodDiscription} index={index} />
                         ))
                         }
                     </div>

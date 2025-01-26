@@ -5,11 +5,12 @@ interface ItemProps {
   name: string;
   price: number;
   description: string;
+  index:number;
 }
 
-const Item: React.FC<ItemProps> = ({ name, price, description }) => {
+const Item: React.FC<ItemProps> = ({ name, price, description,index }) => {
   return (
-    <div className={styles.menu_item}>
+    <div className={styles.menu_item} key={index}>
       <div className={styles.menu_header}>
         <span className={styles.name}>{name}</span>
         <span className={styles.dots}></span>
