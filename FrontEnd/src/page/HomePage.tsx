@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
 
     const fetchdata = async () => {
       try {
-        await axios.get("http://localhost:5000/api/menu").then((response) => {
+        await axios.get("https://deepsoft-menu-task-8516t7sle-arjun-sureshs-projects.vercel.app/api/menu").then((response) => {
           console.log(response.data);
           if (response && response.status == 200 && response.data) {
             setMenulist(response.data)
@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
 
     const fetchfooditems = async () => {
       try {
-        await axios.get("http://localhost:5000/api/food").then((response) => {
+        await axios.get("https://deepsoft-menu-task-8516t7sle-arjun-sureshs-projects.vercel.app/api/food").then((response) => {
           console.log(response.data);
           if (response && response.status == 200 && response.data) {
             setFooditems(response.data)
