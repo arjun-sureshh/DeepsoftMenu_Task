@@ -74,6 +74,7 @@
 
 .navmenu {
   color: rgba(7, 150, 239, 1);
+  cursor: pointer;
 }
 
 .menuToggle {
