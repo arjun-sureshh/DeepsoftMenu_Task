@@ -1,7 +1,7 @@
 const express = require('express');
-const connectDB = require('../config/db');
-const menuRoutes = require('../routes/menuRoutes');
-const foodRoutes = require("../routes/foodRouters")
+const connectDB = require('./src/config/db');
+const menuRoutes = require('./src/routes/menuRoutes');
+const foodRoutes = require("./src/routes/foodRouters")
 const cors = require("cors")
 
 const app = express();
