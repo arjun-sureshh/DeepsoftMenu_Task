@@ -55,3 +55,14 @@
         padding: 2.3% 0%;
     }
 }
+@media (max-width: 320px) {
+
+    .items {
+        width: 83.25px;
+        height: 32.98px;
+    }
+
+    .container {
+        padding: 2.3% 0%;
+    }
+}

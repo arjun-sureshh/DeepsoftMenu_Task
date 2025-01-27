@@ -233,3 +233,50 @@
     }
 
 }
+@media (max-width: 320px) {
+
+    .menu_grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sideimg {
+        display: none;
+    }
+    .titleSec{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 18px;
+        text-align: center;
+        line-height: 28.1px;
+        letter-spacing: 0.02em;
+    }
+
+    .img {
+        img {
+            width: 60px;
+            height: 99px;
+            top: -50px;
+            position: absolute;
+        }
+    }
+    .border {
+        width: 20px;
+        height: 0px;
+        border: 1.6px solid rgba(133, 120, 120, 1)
+    }
+
+    .menuimage {
+        img {
+            width: 80px;
+            height: 101px;
+            bottom: -20px;
+            right: 0px;
+            position: absolute;
+        }
+    }
+}

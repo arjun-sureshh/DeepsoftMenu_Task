@@ -1,6 +1,6 @@
 const Menu = require("../models/menuModels");
 
-// Get all menu items
+
 const getAllMenu = async (req, res) => {
   try {
     const menus = await Menu.find();
@@ -10,7 +10,7 @@ const getAllMenu = async (req, res) => {
   }
 };
 
-// Create a new menu item
+
 const createMenu = async (req, res) => {
   const { menuname, menudiscription } = req.body;
 
@@ -19,7 +19,7 @@ const createMenu = async (req, res) => {
   }
 
   try {
-    // Corrected model name from User to Menu
+    
     const existingMenu = await Menu.findOne({ menuname });
 
     if (existingMenu) {
