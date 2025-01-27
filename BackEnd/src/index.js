@@ -1,7 +1,7 @@
 const express = require('express');
 const connectDB = require('./config/db'); // DB connection file
 const menuRoutes = require('./routes/menuRoutes'); // Correct path to menuRoutes
-const foodRoutes = require('./routes/foodRoutes'); // Correct path to foodRoutes
+const foodRoutes = require('./routes/foodRouters'); // Correct path to foodRoutes
 const cors = require('cors');
 
 const app = express();
