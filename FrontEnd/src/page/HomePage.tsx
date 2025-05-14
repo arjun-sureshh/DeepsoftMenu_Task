@@ -6,7 +6,6 @@ import Menu from '../components/menu/Menu'
 import MenuDetails from '../components/menuDetails/MenuDetails'
 import About from '../components/about/about'
 import axios from 'axios'
-import { CircularProgress } from '@mui/material'
 
 interface menulistProps {
   menuname: string;
@@ -71,19 +70,15 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      {menulist ?
+      
         <div className={styles.container}>
           <NavBar />
           <Banner />
           <Menu menulist={menulist} selectedMenu={selectedMenu} setselectedMenu={setSelectedMenu} />
           <MenuDetails selectedMenu={selectedMenu} foodItems={fooditems} />
           <About />
-        </div> :
-        <div className={styles.loading}>
-
-          <CircularProgress />
-        </div>
-      }
+        </div> 
+       
     </>
   )
 }
